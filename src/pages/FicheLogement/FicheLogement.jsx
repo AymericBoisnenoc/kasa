@@ -3,7 +3,6 @@ import Logement from '../../components/Logement/Logement'
 
 const FicheLogement = () => {
     return <div>
-        <Logement/>
     </div>;
 };
 
