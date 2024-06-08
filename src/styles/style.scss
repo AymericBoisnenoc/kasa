@@ -1,0 +1,74 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: red;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-left: 20px;
+    }
+
+    a {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        color: black;
+        font-size: 1.2rem;
+        text-decoration: none; /* Supprime la décoration de texte (soulignement) */
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #ff6347;
+        }
+
+        &.active-link {
+            text-decoration: underline;
+            text-decoration-thickness: 2px; /* Augmenter l'épaisseur de l'underline */
+        }
+    }
+}
+
+
+
+
+
+
+.home-banner {
+    position: relative; /* Crée un contexte de positionnement pour les éléments enfants */
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    color: white;
+    img{
+        width: 100%;
+        height: 223px;
+        object-fit: cover;
+        border-radius: 30px;
+        filter:drop-shadow(10px);
+    }
+    h1{
+        position: absolute; /* Positionne l'élément de manière absolue par rapport à .home-banner */
+        top: 34%; /* Centre verticalement */
+        left: 50%; /* Centre horizontalement */
+        transform: translate(-50%, -50%); /* Compense la translation pour centrer exactement */
+        color: white;
+        font-size: 4em; /* Taille de la police */
+        background-color: rgba(0, 0, 0, 0.5); /* Optionnel : fond semi-transparent pour améliorer la lisibilité */
+        /* Quatre valeurs - Haut, Droite, Bas, Gauche */
+        padding: 80px 290px 75px 284px;
+        border-radius: 30px;
+        width:max-content
+    }
+}
