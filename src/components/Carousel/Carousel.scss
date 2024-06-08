@@ -1,0 +1,49 @@
+.carousel {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    overflow: hidden;
+  
+    .carousel-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .carousel-image {
+        width: 100%;
+        height: auto;
+      }
+  
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+  
+        &-left {
+          left: 10px;
+        }
+  
+        &-right {
+          right: 10px;
+        }
+      }
+    }
+  
+    .carousel-counter {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  }
+  

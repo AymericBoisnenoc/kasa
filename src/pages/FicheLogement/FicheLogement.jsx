@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Logement from '../../components/Logement/Logement'
 
 const FicheLogement = () => {
     return <div>
-        {/* Ici sera mis les différentes fiche de logement */}
+        <Logement/>
     </div>;
 };
 
