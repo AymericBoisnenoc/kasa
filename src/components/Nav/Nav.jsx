@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/style.scss';
+import logo from '../../assets/img/kasa.svg'
 
 function Nav() {
     // État pour stocker le lien actif
@@ -13,7 +14,7 @@ function Nav() {
 
     return (
         <nav className="nav">
-            <h1>KASA</h1>
+            <img src={logo} alt="logo de kasa" />
             <ul>
                 <li>
                     <Link to="/" className={activeLink === '/' ? 'active-link' : ''} onClick={() => handleLinkClick('/')}>Accueil</Link>
