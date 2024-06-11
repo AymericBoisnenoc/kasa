@@ -1,55 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from "react";
 
-const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [images, setImages] = useState([]);
+export default function Carrousel({ slides }) {
+	const [current, setCurrent] = useState(0); //je définis l'index du premier slide à 0
+	const length = slides ? slides.length : 0; // longueur du tableau de slides
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch("/logements.json");
-        if (!response.ok) {
-          throw new Error('Erreur lors de la récupération des données');
-        }
-        const data = await response.json();
-        setImages(data);
-      } catch (error) {
-        console.error('Erreur lors de la récupération des images:', error);
-      }
-    };
+	const nextSlide = () => {
+		setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
+	};
+	const prevSlide = () => {
+		setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
+	};
 
-    fetchImages();
-  }, []);
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  return (
-    <div id="carousel">
-      <div id="slides">
-        {images.map((image, index) => (
-          <div key={index} className="slide">
-            <img src={image.url} alt={`Slide ${index}`} />
-          </div>
-        ))}
-      </div>
-      <button className="carousel-btn prev" onClick={prevSlide}>
-        Précédent
-      </button>
-      <button className="carousel-btn next" onClick={nextSlide}>
-        Suivant
-      </button>
-    </div>
-  );
-};
-
-export default Carousel;
+	return (
+		<section id="carrousel-container">
+			{length > 1 && (
+				<img
+					alt="gauche"
+					onClick={prevSlide}
+					className="leftArrow"
+				/>
+			)}
+			{length > 1 && (
+				<img
+					alt="droite"
+					onClick={nextSlide}
+					className="rightArrow"
+				/>
+			)}
+			{slides && slides.map((slide, index) => (
+				<div
+					key={index} // mise en place du slider avec affichage conditionnel et opacity=1 quand le slide en cours vaut l'index
+					className={
+						current === index
+							? "slider bl-msk wh-msk active-anim"
+							: "slider bl-msk wh-msk"
+					}
+				>
+					{index === current && <img src={slide} alt="appartement à louer" />}
+					{index === current && (
+						<span className="slider__number">
+							{current + 1}/{length}
+						</span>
+					)}
+				</div>
+			))}
+		</section>
+	);
+}
