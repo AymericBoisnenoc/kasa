@@ -2,20 +2,13 @@ import React, { useEffect, useState } from "react";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
 import Cards from '../../components/Cards/Cards';
 import { Link } from "react-router-dom";
+import Logements from '../../data/logements.json'
 
 export default function Home() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("/logements.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erreur');
-                }
-                return response.json();
-            })
-            .then(data => setData(data))
-            .catch(error => console.error('Error fetching data:', error));
+        setData(Logements)
     }, []);
 
     return (
