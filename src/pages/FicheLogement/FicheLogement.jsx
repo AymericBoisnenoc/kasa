@@ -1,10 +1,12 @@
 import React from 'react';
 import Logement from '../../components/Logement/Logement'
+import Carousel from '../../components/Carousel/Carousel';
 
-const FicheLogement = () => {
+export default function FicheLogement (){
     return <div>
         <Logement/>
+        <Carousel/>
     </div>;
 };
 
-export default FicheLogement;
+
