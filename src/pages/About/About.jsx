@@ -12,14 +12,15 @@ const About = () => {
   }, []);
 
   return (
-    <div>
+    <div className='About-page'>
       <AboutBanner />
-      <h2>À propos</h2>
+      <div >
       {data.map((item, index) => (
-        <Collapse key={index} title={item.aboutTitle}>
+        <Collapse  key={index} title={item.aboutTitle}>
           <p>{item.aboutText}</p>
         </Collapse>
       ))}
+      </div>
     </div>
   );
 };
