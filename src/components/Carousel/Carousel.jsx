@@ -1,4 +1,7 @@
 import { useState } from "react";
+import vectorG from '../../assets/img/vector-left.svg'
+import vectorD from '../../assets/img/vector-right.svg'
+
 
 export default function Carrousel({ slides }) {
 	const [current, setCurrent] = useState(0); //je définis l'index du premier slide à 0
@@ -15,6 +18,7 @@ export default function Carrousel({ slides }) {
 		<section id="carrousel-container">
 			{length > 1 && (
 				<img
+				src={vectorG}
 					alt="gauche"
 					onClick={prevSlide}
 					className="leftArrow"
@@ -22,6 +26,7 @@ export default function Carrousel({ slides }) {
 			)}
 			{length > 1 && (
 				<img
+				src={vectorD}
 					alt="droite"
 					onClick={nextSlide}
 					className="rightArrow"
