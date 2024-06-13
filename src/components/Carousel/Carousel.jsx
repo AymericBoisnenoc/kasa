@@ -1,6 +1,7 @@
 import { useState } from "react";
 import vectorG from '../../assets/img/vector-left.svg'
 import vectorD from '../../assets/img/vector-right.svg'
+import './Carousel.scss'
 
 
 export default function Carrousel({ slides }) {
@@ -15,7 +16,7 @@ export default function Carrousel({ slides }) {
 	};
 
 	return (
-		<section id="carrousel-container">
+		<section className="carousel-container">
 			{length > 1 && (
 				<img
 				src={vectorG}
