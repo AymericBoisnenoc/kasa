@@ -1,34 +1,31 @@
 .carousel-container{
   display: flex;
   justify-content: center;
+  height: 415px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
   .leftArrow {
-    background-color: blue;
     position: absolute;
-    top: 70%;
-    right: 79%;
+    top: 50%;
+    right: 76%;
   }
   .rightArrow {
-    background-color: blue;
     position: absolute;
-    top: 70%;
-    left: 79%;
+    top: 50%;
+    left: 76%;
   }
-    .slider {
-  height: 100%; /* Ajuste la hauteur en fonction de la largeur pour maintenir les proportions */
-
-      img {
-        width: 100%; /* Ajuste la largeur de l'image pour qu'elle remplisse son conteneur */
+     .slider img {
+        width: 72em; /* Ajuste la largeur de l'image pour qu'elle remplisse son conteneur */
         height: 100%; /* Ajuste la hauteur de l'image pour qu'elle remplisse son conteneur */
         object-fit: cover; /* Assure que l'image couvre complètement le conteneur sans déformation */
-        /* Ajoutez d'autres styles d'image ici si nécessaire */
-        object-fit: contain;
       }
-    }
-  .slider__number{
-    background-color: blue;
+      
+      .slider__number{
     color:#fff;
     font-size: 1.5em;
-    position: relative;
+    top: 90%;
+    position: absolute;
     right: 50%;
   }
 }

@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
     color: red;
     img{
         width: 160px;
@@ -69,8 +71,8 @@
 .card-logement {
     position: relative;
     display: flex;
-    width: 335px;
-    height: 255px;
+    width: 360px;
+    height: 335px;
     min-width: 335px;
     transition: transform 1s;
     
@@ -96,17 +98,28 @@
     &__title {
         display: flex;
         align-items: flex-end;
+        font-family: 'Montserrat';
+        font-size: 1em;
+        font-weight: bold;
         color: #fff;
-    }
+        padding-left: 10px;
+       }
 }
 
 .cards-container {
     display: flex;
     justify-content: center;
-    width: 100%;
-    gap: 20px;
-    margin: 22px 0;
+    width: 66%;
+    gap: 42px;
+    left: 327px;
     flex-wrap: wrap;
+    background-color:#F6F6F6;
+    border-radius: 15px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    position: relative;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
 
 .link_card_logement {
