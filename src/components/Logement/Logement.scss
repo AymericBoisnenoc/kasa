@@ -3,8 +3,8 @@
     flex-direction: column;
     gap: 20px; /* Ajout d'un espacement entre les sections */
     font-family: 'Montserrat';
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15%;
   }
   
   .logement-header-host {
@@ -45,7 +45,7 @@
     .host__name {
       font-size: 1.5em;
       color: #FF6060;
-      width: 108Zpx;
+      width: 108px;
     }
   
     .host__img {
@@ -91,9 +91,10 @@
     display: flex;
     flex-direction: row;
     gap: 20px; /* Espacement entre la description et les équipements */
-    width: 100%;
+    width: 35%;
     justify-content: center;
     align-items: baseline;
+    margin-left: 33%;
   .collapse{
     display: flex;
     justify-content: space-between;
@@ -106,11 +107,11 @@
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+        width: 550px;
     }
     p{
         display: flex;
-        text-align: center;
-        padding-left: 14%;
+        width: 100%;
         
     }
   }
@@ -124,4 +125,5 @@
       color: #666;
     }
   }
+  
   
