@@ -1,20 +1,24 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Carousel from '../Carousel/Carousel';
-import ErrorPage from '../ErrorPage/ErrorPage'
-import etoileRouge from '../../assets/img/star-rate.svg'
-import etoileGrise from '../../assets/img/star-null.svg'
-import logementsData from '../../data/logements.json'; // Importez les données depuis logements.json
+import './Logement.scss';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import etoileRouge from '../../assets/img/star-rate.svg';
+import etoileGrise from '../../assets/img/star-null.svg';
+import logementsData from '../../data/logements.json';
+import Collapse from '../Collapse/Collapse'; // Importez le composant Collapse
 
 const Logement = () => {
-
-  // Recherchez le logement correspondant dans les données
   const { id } = useParams();
   const logement = logementsData.find(logement => logement.id === id);
-  const host = logement.host
-  const stars = []
-  const totalStars = 5
-  const rating = logement.rating
+
+  if (!logement) {
+    return <ErrorPage />;
+  }
+
+  const host = logement.host;
+  const stars = [];
+  const totalStars = 5;
+  const rating = logement.rating;
 
   for (let i = 1; i <= totalStars; i++) {
     if (i <= rating) {
@@ -23,43 +27,45 @@ const Logement = () => {
       stars.push(<img key={i} src={etoileGrise} alt="etoileGrise" />);
     }
   }
-  
-  // Assurez-vous que le logement existe avant de l'afficher
-  if (!logement) {
-      return <div>
-      <ErrorPage/>;
-    </div>
-    }
 
-    
-    // Extrayez les données du logemen
-    
-    return (
-      <div>
-        <Carousel />
-        <h2>{logement.title}</h2>
-        <p>{logement.description}</p>
-        <div>
-          <p>{host.name}</p>
-          <img src={host.picture} alt={host.name} />
+  return (
+    <div className="logement-container">
+      <div className="logement-header-host">
+        <div className="logement-header">
+          <h2 className="logement-header__title">{logement.title}</h2>
+          <p className="logement-header__location">{logement.location}</p>
         </div>
-        <div>
-        {stars.map((star, index) => (
-          <span key={index}>{star}</span>
-        ))}
+        <div className="host-div">
+          <p className="host__name">{host.name}</p>
+          <img className="host__img" src={host.picture} alt={host.name} />
+        </div>
       </div>
-        <p>{logement.location}</p>
-        <ul>
-        {logement.equipments.map((equipment, index) => (
-          <li key={index}>{equipment}</li>
-        ))}
-      </ul>
+      <div className='logement-ts'>
         <ul>
           {logement.tags.map((tag, index) => (
-            <li key={index}>{tag}</li>
-            ))}
+            <li className="logement-ts__tags" key={index}>{tag}</li>
+          ))}
         </ul>
+        <div className="logement-ts__stars">
+          {stars.map((star, index) => (
+            <span key={index}>{star}</span>
+          ))}
+        </div>
       </div>
-    );   
-}
+      <div className='logement-content'>
+        <Collapse title="Description">
+          <p className="logement-content__desc">{logement.description}</p>
+        </Collapse>
+        <Collapse title="Equipements">
+          <ul>
+            {logement.equipments.map((equipment, index) => (
+              <li className="logement-content__equipements" key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </div>
+    </div>
+  );
+};
+
 export default Logement;

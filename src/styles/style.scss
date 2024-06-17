@@ -126,7 +126,7 @@
     text-decoration: none;
 }
 
-.about-collapse{
+.collapse{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -146,11 +146,11 @@
         margin-bottom: 1%;
         padding-bottom: 40px;
     }
-    .button-about img {
+    .collapse-button img {
         transition: transform 0.3s ease; /* Ajoute une transition à la propriété transform */
       }
       
-      .button-about img.rotate {
+      .collapse-button img.rotate {
         transform: rotate(-180deg); /* Applique une rotation de 180 degrés à l'image */
       }
       

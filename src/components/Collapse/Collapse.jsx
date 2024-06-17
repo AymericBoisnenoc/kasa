@@ -10,8 +10,8 @@ const Collapse = ({ title, children }) => {
   };
 
   return (
-    <div className='about-collapse'>
-      <button onClick={toggle} className='button-about'>
+    <div className='collapse'>
+      <button onClick={toggle} className='collapse-button'>
         {title} 
         <img src={vectorUp} alt='' className={isOpen ? 'rotate' : ''} />
       </button>
