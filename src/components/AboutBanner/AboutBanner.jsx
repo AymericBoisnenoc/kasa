@@ -1,11 +1,15 @@
 import React from 'react';
-import bannerAboutImg from '../../assets/img/about.jpg'
-import '../../styles/style.scss'
+import aboutImg from '../../assets/img/about.jpg';
+import '../../styles/style.scss';
+import Banner from '../Banner/Banner'; // Correct import statement
 
-const AboutBanner = () => {
-    return <div className="banner">
-        <img className='home-img' src={bannerAboutImg} alt="banniere de A propos" />
-    </div>;
+const img = aboutImg;
+const HomeBanner = () => {
+    return (
+        <div className='banner'>
+            <Banner img={img} alt="banniere about" /> 
+        </div>
+    );
 };
 
-export default AboutBanner;
+export default HomeBanner;

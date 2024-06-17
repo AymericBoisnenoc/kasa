@@ -54,14 +54,14 @@
     }
     h1{
         position: absolute; /* Positionne l'élément de manière absolue par rapport à .home-banner */
-        top: 34%; /* Centre verticalement */
+        top: 35%; /* Centre verticalement */
         left: 50%; /* Centre horizontalement */
         transform: translate(-50%, -50%); /* Compense la translation pour centrer exactement */
         color: white;
         font-size: 4em; /* Taille de la police */
         background-color: rgba(0, 0, 0, 0.5); /* Optionnel : fond semi-transparent pour améliorer la lisibilité */
         /* Quatre valeurs - Haut, Droite, Bas, Gauche */
-        padding: 80px 290px 75px 284px;
+        padding: 63px 290px 87px 268px;
         border-radius: 30px;
         width:max-content
     }
