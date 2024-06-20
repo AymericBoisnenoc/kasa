@@ -128,10 +128,11 @@
 
 .collapse{
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    padding-left: 22%;
+    width: 80%;
     button {
         background-color: #FF6060;
         color: #fff;
@@ -157,7 +158,7 @@
     p{
         font-size: 1.2em;
         overflow: hidden;
-        width: 70%;
+        width: 67%;
         padding-left: 3%;
     }
 }
