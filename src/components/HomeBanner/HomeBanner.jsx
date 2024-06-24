@@ -8,7 +8,7 @@ const HomeBanner = () => {
     return (
         <div className='banner'>
             <Banner img={img} alt="banniere home" /> {/* Use Banner component correctly */}
-            <h1 className='home-title'>Chez vous, partout et ailleurs</h1>
+            <h1 className='home-title'>Chez vous,<span className="line-break"> partout et ailleurs</span></h1>
         </div>
     );
 };

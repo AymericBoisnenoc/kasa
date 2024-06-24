@@ -1,32 +1,41 @@
-.carousel-container{
+.carousel-container {
   display: flex;
   justify-content: center;
   height: 415px;
   width: 100%;
   position: relative;
   overflow: hidden;
+
   .leftArrow {
     position: absolute;
     top: 50%;
     right: 82%;
   }
+
   .rightArrow {
     position: absolute;
     top: 50%;
     left: 82%;
   }
-     .slider img {
-        border-radius: 20px;
-        width: 84em; /* Ajuste la largeur de l'image pour qu'elle remplisse son conteneur */
-        height: 100%; /* Ajuste la hauteur de l'image pour qu'elle remplisse son conteneur */
-        object-fit: cover; /* Assure que l'image couvre complètement le conteneur sans déformation */
-      }
-      
-      .slider__number{
-    color:#fff;
-    font-size: 1.5em;
-    top: 90%;
-    position: absolute;
-    right: 50%;
+
+  .slider {
+    display: flex;
+    overflow: hidden;
+    height: 100%; /* S'assure que le slider prend toute la hauteur du conteneur */
+    
+    img {
+      border-radius: 20px;
+      width: 1000px; /* Largeur fixe pour les images */
+      height: 100%; /* Hauteur prend toute la place disponible */
+      object-fit: cover; /* Remplir le conteneur tout en conservant les proportions */
+    }
+    
+    .slider__number {
+      color: #fff;
+      font-size: 1.5em;
+      top: 90%;
+      position: absolute;
+      right: 50%;
+    }
   }
 }

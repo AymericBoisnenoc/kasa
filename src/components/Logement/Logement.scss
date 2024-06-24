@@ -90,11 +90,11 @@
   .logement-content {
     display: flex;
     flex-direction: row;
-    gap: 20px; /* Espacement entre la description et les équipements */
-    width: 35%;
+    gap: 0px;
+    width: 28%;
     justify-content: center;
     align-items: baseline;
-    margin-left: 33%;
+    margin-left: 28%;
   .collapse{
     display: flex;
     justify-content: space-between;
@@ -104,10 +104,10 @@
     padding-right: 150px;
     margin-bottom: 40px;
     button{
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        width: 550px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 450px;
     }
     p{
         display: flex;
