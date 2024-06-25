@@ -16,7 +16,8 @@ export default function Carrousel({ slides }) {
 	};
 
 	return (
-		<section className="carousel-container">
+		<section className="carousel">
+			<div className="carousel-container">
 			{length > 1 && (
 				<img
 				src={vectorG}
@@ -50,6 +51,7 @@ export default function Carrousel({ slides }) {
 					)}
 				</div>
 			))}
+			</div>
 		</section>
 	);
 }

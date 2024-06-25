@@ -1,7 +1,8 @@
 .carousel-container {
   display: flex;
   justify-content: center;
-  height: 415px;
+  align-items: center;  /* Ajouté pour centrer verticalement le contenu */
+  height: 415px;  /* Hauteur définie pour le conteneur */
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -18,17 +19,17 @@
     left: 82%;
   }
 
-  .slider {
-    display: flex;
-    overflow: hidden;
-    height: 100%; /* S'assure que le slider prend toute la hauteur du conteneur */
-    
-    img {
-      border-radius: 20px;
-      width: 1000px; /* Largeur fixe pour les images */
-      height: 100%; /* Hauteur prend toute la place disponible */
-      object-fit: cover; /* Remplir le conteneur tout en conservant les proportions */
-    }
+.slider {
+  display: flex;
+  overflow: hidden;
+  height: 100%; /* S'assure que le slider prend toute la hauteur du conteneur */
+  
+  img {
+    border-radius: 20px;
+    max-width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* La hauteur s'ajuste automatiquement pour conserver les proportions */
+    object-fit: cover; /* Remplir le conteneur tout en conservant les proportions */
+  }
     
     .slider__number {
       color: #fff;
@@ -36,6 +37,26 @@
       top: 90%;
       position: absolute;
       right: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    .slider {
+      img {
+        border-radius: 20px;
+        width: 100%; /* Prendre toute la largeur disponible */
+        height: auto; /* S'ajuster proportionnellement */
+        object-fit: cover; /* Remplir le conteneur tout en conservant les proportions */
+      }
+      
+      .slider__number {
+        bottom: 10px; /* Placer en bas */
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+      }
     }
   }
 }
