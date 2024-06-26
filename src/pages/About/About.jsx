@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className='About-page'>
       <AboutBanner />
-      <div >
+      <div className='contain-collapse'>
       {data.map((item, index) => (
         <Collapse  key={index} title={item.aboutTitle}>
           <p>{item.aboutText}</p>

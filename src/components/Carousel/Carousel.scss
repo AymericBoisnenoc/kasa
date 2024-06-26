@@ -20,9 +20,9 @@
   }
 
 .slider {
-  display: flex;
-  overflow: hidden;
-  height: 100%; /* S'assure que le slider prend toute la hauteur du conteneur */
+    overflow: hidden;
+    height: 100%;
+    border-radius: 20px;
   
   img {
     border-radius: 20px;

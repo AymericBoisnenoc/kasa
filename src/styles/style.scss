@@ -135,7 +135,17 @@ main{
 .link_card_logement {
     text-decoration: none;
 }
-
+.contain-collapse{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15%;
+    .collapse {
+        width: 100%;
+        padding: 0;
+    }
+}
 .collapse {
     display: flex;
     flex-direction: column;
@@ -280,12 +290,6 @@ footer{
         h1{
             font-size: 2.5em;
             text-align: left;
-            white-space: normal;
-            position: absolute;
-            top: 38%;
-            padding:15% 5%;
-            object-fit: contain;
-            max-width: max-content;   
         }
         .line-break {
             display: block;
@@ -341,7 +345,10 @@ footer{
     .link_card_logement {
         text-decoration: none;
     }
-    
+    .contain-collapse{
+        padding-top: 30px;
+        left: 0;
+    }
     .collapse{
         width: 100%;
         padding: 0;
