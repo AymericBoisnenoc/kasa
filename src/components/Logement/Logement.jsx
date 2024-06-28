@@ -14,12 +14,6 @@ const LogementHeader = ({ title, location }) => (
   </div>
 );
 
-const Host = ({ name, picture }) => (
-  <div className="host-div">
-    <p className="host__name">{name}</p>
-    <img className="host__img" src={picture} alt={name} />
-  </div>
-);
 
 const Tags = ({ tags }) => (
   <ul>
@@ -27,6 +21,12 @@ const Tags = ({ tags }) => (
       <li className="logement-ts__tags" key={index}>{tag}</li>
     ))}
   </ul>
+);
+const Host = ({ name, picture }) => (
+  <div className="host-div">
+    <p className="host__name">{name}</p>
+    <img className="host__img" src={picture} alt={name} />
+  </div>
 );
 
 const Stars = ({ rating }) => {

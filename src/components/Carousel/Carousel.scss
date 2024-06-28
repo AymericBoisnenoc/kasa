@@ -27,7 +27,7 @@
   img {
     border-radius: 20px;
     max-width: 100%; /* L'image prend toute la largeur du conteneur */
-    height: auto; /* La hauteur s'ajuste automatiquement pour conserver les proportions */
+    height: 100%; /* La hauteur s'ajuste automatiquement pour conserver les proportions */
     object-fit: cover; /* Remplir le conteneur tout en conservant les proportions */
   }
     
