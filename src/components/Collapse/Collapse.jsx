@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import vectorUp from '../../assets/img/vector-up.svg';
+import './Collapse.scss'
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);

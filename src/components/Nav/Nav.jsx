@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/style.scss';
+import './Nav.scss'
 import logo from '../../assets/img/kasa.svg'
 
 function Nav() {

@@ -1,0 +1,47 @@
+.banner {
+    position: relative;  /* Contexte pour le positionnement absolu */
+    width: 100%;
+    height: 200px;  /* Ajustez selon vos besoins */
+    overflow: hidden;  /* Assurez-vous que le contenu ne dépasse pas */
+    border-radius: 25px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* Assurez-vous que l'image couvre toute la bannière */
+    }
+    h1{
+        position: absolute;  /* Positionnement absolu par rapport à .banner */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5); /* Optionnel : fond semi-transparent pour améliorer la lisibilité */
+        display: flex;
+        align-items: center;  /* Centrer verticalement le texte */
+        justify-content: center;  /* Centrer horizontalement le texte */
+        margin: 0;  /* Enlever les marges par défaut */
+        text-align: center;  /* Centrer le texte */
+        padding: 0 20px;  /* Ajoutez du padding si nécessaire */
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .banner {
+
+        padding:0;
+        padding-bottom: 5px;
+        padding-top: 5px;
+
+        img{
+            width: 100%;
+        }
+        h1{
+            font-size: 2.5em;
+            text-align: left;
+        }
+        .line-break {
+            display: block;
+        }
+    }
+}

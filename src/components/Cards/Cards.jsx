@@ -1,3 +1,6 @@
+
+import './Cards.scss'
+
 export default function Card({ cover, title }) { //les cards de locations récupèrent les couvertures et titres en props depuis Home
 	return (
 		<article className="card-logement">

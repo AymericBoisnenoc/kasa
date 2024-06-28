@@ -1,0 +1,45 @@
+.errorContainer{
+    color:#FF6060;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .errorNumber {
+        font-size: 200px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .errorText{
+        font-size: 35px;
+        margin-bottom: 170px;
+    }
+    .errorLinkHome{
+        margin-bottom: 120px;
+        color: #000;
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    .errorContainer{
+        color:#FF6060;
+        font-family: 'Montserrat';
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .errorNumber {
+            font-size: 200px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .errorText{
+            font-size: 35px;
+            margin-bottom: 170px;
+        }
+        .errorLinkHome{
+            margin-bottom: 120px;
+            color: #000;
+        }
+    }
+  }

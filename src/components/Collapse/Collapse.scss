@@ -1,0 +1,79 @@
+.contain-collapse{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15%;
+    .collapse {
+        width: 100%;
+        padding: 0;
+    }
+}
+.collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 22%;
+    width: 80%;
+
+    button {
+        background-color: #FF6060;
+        color: #fff;
+        text-align: start;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        font-size: 1.8em;
+        border: none;
+        width: 70%;
+        height: 25px;
+        margin-bottom: 1%;
+        padding-bottom: 40px;
+    }
+
+    .collapse-button img {
+        transition: transform 0.5s ease; /* Ajoute une transition à la propriété transform */
+    }
+
+    .collapse-button img.rotate {
+        transform: rotate(-180deg); /* Applique une rotation de 180 degrés à l'image */
+    }
+
+    .collapse-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out; /* Définit la transition pour max-height à 3 secondes */
+    }
+
+    .collapse-content.open {
+        max-height: 1000px; /* Ajustez cette valeur selon la taille de votre contenu */
+    }
+
+    p {
+        font-size: 1.2em;
+        overflow: hidden;
+        width: 67%;
+        padding-left: 3%;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .contain-collapse{
+        padding-top: 30px;
+        left: 0;
+    }
+    .collapse{
+        width: 100%;
+        padding: 0;
+        button {
+        border: none;
+        width: 100%;
+          }
+          
+        p{
+            margin-left: 44px;
+            text-align: center;
+        }
+    }
+}
