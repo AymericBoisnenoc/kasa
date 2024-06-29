@@ -18,7 +18,7 @@ const LogementHeader = ({ title, location }) => (
 const Tags = ({ tags }) => (
   <ul>
     {tags.map((tag, index) => (
-      <li className="logement-ts__tags" key={index}>{tag}</li>
+      <li className="logement-header-tags__tags" key={index}>{tag}</li>
     ))}
   </ul>
 );
@@ -43,7 +43,7 @@ const Stars = ({ rating }) => {
     );
   }
 
-  return <div className="logement-ts__stars">{stars}</div>;
+  return <div className="logement-stars-host__stars">{stars}</div>;
 };
 
 const LogementContent = ({ description, equipments }) => (
@@ -73,13 +73,15 @@ const Logement = () => {
 
   return (
     <div className="logement-container">
-      <div className="logement-header-host">
+      <div className='logement-infos'>
+      <div className="logement-header-tags">
         <LogementHeader title={title} location={location} />
+        <Tags tags={tags} />
+      </div>
+      <div className='logement-stars-host'>
+        <Stars rating={rating} />
         <Host name={host.name} picture={host.picture} />
       </div>
-      <div className='logement-ts'>
-        <Tags tags={tags} />
-        <Stars rating={rating} />
       </div>
       <LogementContent description={description} equipments={equipments} />
     </div>
