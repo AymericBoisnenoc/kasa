@@ -1,11 +1,173 @@
+@media screen and (max-width: 768px) {
+  main {
+    align-items: stretch;
+  }
+
+  .logement-container {
+    display: flex;
+    gap: 0;
+    margin-left: 0;
+    width: 100%;
+
+    .logement-infos {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .logement-header-tags {
+    display: flex;
+    justify-content: space-between;
+    /* Distribue l'espace entre les éléments */
+    align-items: center;
+    /* Aligne les éléments verticalement */
+    gap: 20px;
+    /* Ajout d'un espacement entre les éléments */
+    align-items: flex-start;
+
+    &__tags {
+      font-size: 1em;
+      height: 20px;
+    }
+
+    ul {
+      gap: 2px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  .logement-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alignement des éléments sur la gauche */
+    gap: 10px;
+    /* Espacement entre les éléments */
+    width: 100%;
+
+    &__title {
+      font-size: 1.5em;
+    }
+
+  }
+
+  &__location {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    /* Style pour la localisation */
+    margin-top: 0;
+  }
+
+  .host-div {
+    display: flex;
+    align-items: center;
+
+    .host__name {
+      font-size: 1em;
+      color: #FF6060;
+      width: 70px;
+    }
+
+    .host__img {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 44px;
+
+    }
+  }
+
+  /* Autres styles existants */
+  .logement-stars-host {
+    display: flex;
+    gap: 78px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      /* Aligne les éléments de la liste en ligne */
+      list-style-type: none;
+      /* Supprime les puces de la liste */
+      padding: 0;
+      /* Supprime le padding par défaut */
+      margin: 0;
+      /* Supprime le margin par défaut */
+      gap: 9px;
+    }
+
+    &__stars {
+      display: flex;
+      gap: 5px;
+      /* Espacement entre les étoiles */
+    }
+  }
+
+
+  .logement-content {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    width: 80%;
+    /* Adjust the width as needed */
+    justify-content: center;
+    align-items: baseline;
+    margin-left: -16px;
+    margin-right: 5%;
+    margin-top: 5%;
+    padding-bottom: 5px;
+
+    .collapse {
+      display: flex;
+      width: 100%;
+      color: #fff;
+      padding-left: 0px;
+      padding-right: 150px;
+      margin-bottom: 40px;
+      flex-direction: column;
+
+      button {
+        padding-top: 7px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 392px;
+        margin-left: 10px;
+      }
+
+      p {
+        display: flex;
+        width: 319px;
+
+      }
+    }
+
+    &__desc {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    &__equipements {
+      font-size: 1em;
+      color: #666;
+    }
+  }
+}
+
 .logement-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Ajout d'un espacement entre les sections */
+  gap: 20px;
+  /* Ajout d'un espacement entre les sections */
   font-family: 'Montserrat';
   width: 70%;
   margin-left: 15%;
-  .logement-infos{
+
+  .logement-infos {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -19,29 +181,33 @@
   align-items: flex-start;
   gap: 20px;
   flex-direction: column;
+
   &__tags {
     display: flex;
     flex-direction: row;
     width: fit-content;
-  color:#fff;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 1.2em;
-  background-color: #FF6060;
-}
-ul{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    background-color: #FF6060;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 
 
 .logement-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alignement des éléments sur la gauche */
-  gap: 10px; /* Espacement entre les éléments */
+  align-items: flex-start;
+  /* Alignement des éléments sur la gauche */
+  gap: 10px;
+  /* Espacement entre les éléments */
 
   &__title {
     color: #FF6060;
@@ -54,7 +220,8 @@ ul{
   &__location {
     font-size: 18px;
     font-weight: 500;
-    color: #555; /* Style pour la localisation */
+    color: #555;
+    /* Style pour la localisation */
     margin-top: 0;
   }
 }
@@ -62,7 +229,8 @@ ul{
 .host-div {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espacement entre le nom et l'image */
+  gap: 10px;
+  /* Espacement entre le nom et l'image */
   margin-bottom: 0;
 
   .host__name {
@@ -86,23 +254,49 @@ ul{
   flex-wrap: wrap;
   gap: 10px;
   justify-content: space-between;
+
   ul {
-      display: flex;
-      flex-direction: row; /* Aligne les éléments de la liste en ligne */
-      list-style-type: none; /* Supprime les puces de la liste */
-      padding: 0; /* Supprime le padding par défaut */
-      margin: 0; /* Supprime le margin par défaut */
-      gap: 9px;
-    }
+    display: flex;
+    flex-direction: row;
+    /* Aligne les éléments de la liste en ligne */
+    list-style-type: none;
+    /* Supprime les puces de la liste */
+    padding: 0;
+    /* Supprime le padding par défaut */
+    margin: 0;
+    /* Supprime le margin par défaut */
+    gap: 9px;
+  }
 
   &__stars {
     display: flex;
-    gap: 5px; /* Espacement entre les étoiles */
+    gap: 5px;
+    /* Espacement entre les étoiles */
   }
 }
 
 
 .logement-content {
+  @media screen and (max-width: 768px) {
+
+    // ... other styles ...
+    .logement-content {
+      // ... other styles ...
+      width: 80%;
+      /* Or any suitable width you prefer */
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    // ... other styles ...
+    .logement-content {
+      // ... other styles ...
+      width: 100%;
+      /* Or any suitable percentage */
+    }
+  }
+
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -110,26 +304,30 @@ ul{
   justify-content: center;
   align-items: baseline;
   margin-left: 28%;
-.collapse{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  color: #fff;
-  padding-left: 150px;
-  padding-right: 182px;
-  margin-bottom: 40px;
-  button{
-    border-radius: 10px;
+
+  .collapse {
     display: flex;
     justify-content: space-between;
-    width: 589px;
-  }
-  p{
+    width: 100%;
+    color: #fff;
+    padding-left: 150px;
+    padding-right: 182px;
+    margin-bottom: 40px;
+
+    button {
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 589px;
+    }
+
+    p {
       display: flex;
       width: 100%;
-      
+
+    }
   }
-}
+
   &__desc {
     font-size: 1.2em;
     color: #333;
@@ -140,7 +338,6 @@ ul{
     color: #666;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   main{
@@ -241,7 +438,7 @@ ul{
     display: flex;
     flex-direction: column;
     /* gap: 20px; */
-    width: 0%;
+    width: 80%; /* Adjust the width as needed */
     justify-content: center;
     align-items: baseline;
     margin-left: -16px;
