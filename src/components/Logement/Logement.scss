@@ -276,6 +276,7 @@
 }
 
 
+
 .logement-content {
   @media screen and (max-width: 768px) {
 
@@ -320,11 +321,13 @@
       justify-content: space-between;
       width: 589px;
     }
-
+    .collapse-content.open {
+      width:fit-content
+  }
     p {
       display: flex;
       width: 100%;
-
+      
     }
   }
 
@@ -463,8 +466,7 @@
     }
     p{
         display: flex;
-        width: 319px;
-        
+        width: 79%;
     }
   }
     &__desc {
