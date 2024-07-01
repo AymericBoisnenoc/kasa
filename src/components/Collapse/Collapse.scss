@@ -72,9 +72,10 @@
         border: none;
         width: 100%;
           }
-          
+          .collapse-content.open {
+            width:100%;
+        }
         p{
-            margin-left: 44px;
             text-align: center;
         }
     }
